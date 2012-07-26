@@ -2,7 +2,7 @@ function init(){
 	var map = new L.Map("map");
 	
 	/* Tilestream Layer example: */
-	var historicUrl = "http://opengis.azexperience.org/tiles/v2/azHistoric1880/{z}/{x}/{y}.png"",
+	var historicUrl = "http://opengis.azexperience.org/tiles/v2/azHistoric1880/{z}/{x}/{y}.png",
 		historicLayer = new L.TileLayer(historicUrl, {maxZoom: 10}); 
 	
 	/* WMS layer example: */
