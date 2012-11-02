@@ -2,11 +2,11 @@ function init(){
 	var map = new L.Map("map");
 	
 	/* Tilestream Layer example: */
-	var historicUrl = "http://opengis.azexperience.org/tiles/v2/azHistoric1880/{z}/{x}/{y}.png",
+	var historicUrl = "/tiles/v2/azHistoric1880/{z}/{x}/{y}.png",
 		historicLayer = new L.TileLayer(historicUrl, {maxZoom: 10}); 
 	
 	/* WMS layer example: */
-	var wmsUrl = "http://opengis.azexperience.org/geoserver/wms",
+	var wmsUrl = "/geoserver/wms",
 		wmsLayer = new L.TileLayer.WMS(wmsUrl, { 
 			maxZoom: 10, 
 			layers: "vae:azhistoricmines", 
@@ -15,7 +15,7 @@ function init(){
 		}); 
 	
 	/* WFS GeoJSON layer example: */
-	var wfsLayer = new L.GeoJSON.WFS("http://opengis.azexperience.org/geoserver/wfs", "vae:azhistoricmines", {
+	var wfsLayer = new L.GeoJSON.WFS("/geoserver/wfs", "vae:azhistoricmines", {
 		pointToLayer: function(latlng) { 
 			return new L.Marker(latlng, { 
 				icon: new L.Icon({ 
